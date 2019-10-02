@@ -1,13 +1,11 @@
-import { h } from 'preact';
 import Header from '../src/components/header';
-import { Link } from 'preact-router/match';
-// See: https://github.com/mzgoddard/preact-render-spy
-import { shallow } from 'preact-render-spy';
+import { shallow } from 'enzyme';
+import { h } from 'preact';
 
 describe('Initial Test of the Header', () => {
-	test('Header renders 3 nav items', () => {
+	test('Header renders 1 nav item', () => {
 		const context = shallow(<Header />);
 		expect(context.find('h1').text()).toBe('TVHeadend App');
-		expect(context.find(<Link />).length).toBe(1);
+		expect(context.find('Link').length).toBe(1);
 	});
 });
