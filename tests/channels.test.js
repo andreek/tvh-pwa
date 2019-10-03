@@ -3,7 +3,9 @@ import { shallow } from 'enzyme';
 import { h } from 'preact';
     
 const channels = [
-  { value: 'ARD' }, { value: 'ZDF' }, { value: 'NDR' },
+  { uuid: '1', name: 'Das Erste HD', icon: '/erstehd.png' },
+  { uuid: '2', name: 'ZDF HD', icon: '/erstehd.png' },
+  { uuid: '3', name: 'NDR HD', icon: '/erstehd.png' },
 ];
 
 describe('Initial Test of the Channels', () => {
