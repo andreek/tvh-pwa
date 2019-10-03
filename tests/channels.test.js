@@ -9,8 +9,7 @@ const channels = [
 describe('Initial Test of the Channels', () => {
   test('Channels lists 3 channels', () => {
     const context = shallow(<Channels channels={channels} />);
-    expect(context.find('.channels').length).toBe(1);
-    expect(context.find('.channel').length).toBe(3);
-    expect(context.find('.channel').first().text()).toBe('ARD');
+    expect(context.find('ul').length).toBe(1);
+    expect(context.find('Channel').length).toBe(3);
   });
 });

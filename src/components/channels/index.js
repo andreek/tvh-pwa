@@ -1,16 +1,16 @@
 import { Component, h } from 'preact';
-import { Link } from 'preact-router/match';
+import Channel from './channel';
 
 export default class Channels extends Component {
   render() {
     const { channels } = this.props;
     const list = channels.map(
-      channel => <div class="channel">{channel.value}</div>
+      channel => <Channel channel={channel} />
     );
     return (
-      <div class="channels">
+      <ul class="channels">
         {list}
-      </div>
+      </ul>
     );
   }
 }
